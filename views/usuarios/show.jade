@@ -1,0 +1,13 @@
+block content
+	h1 #{value.nome}
+	hr
+	p Login: #{value.login}
+	p ID: #{value._id}
+	p Data de cadastro: #{value.data_cad}
+	br
+	form(method="POST", action="/usuarios/delete/#{value._id}", role="form")
+		input(type="hidden" name="_method" value="delete")
+		
+		input(type="submit", value="Excluir", class="btn btn-danger")
+	br
+	a(href="/usuarios" title="voltar") Voltar
